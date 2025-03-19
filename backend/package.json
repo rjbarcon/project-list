@@ -7,18 +7,14 @@
   "description": "An application where you can add and view list of projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist/",
+    "dev": "nodemon --watch src -e ts --exec npm run start",
+    "build": "npm-run-all clean tsc",
+    "serve": "node dist/server.js",
+    "start": "npm-run-all build serve",
+    "tsc": "tsc -p ./tsconfig.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rjbarcon/project-list.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rjbarcon/project-list/issues"
-  },
-  "homepage": "https://github.com/rjbarcon/project-list#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -30,9 +26,20 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.1",
+    "@types/express": "^4.17.21",
     "nodemon": "^3.1.9",
     "npm-run-all2": "^7.0.2",
-    "rimraf": "^6.0.1"
-  }
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjbarcon/project-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjbarcon/project-list/issues"
+  },
+  "homepage": "https://github.com/rjbarcon/project-list#readme"
 }
