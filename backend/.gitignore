@@ -1,5 +1,6 @@
 # dependencies
 node_modules
+package-lock.json
 
 # production
 build
@@ -21,3 +22,4 @@ yarn-error.log*
 
 # local scripts
 initialize.node.bat
+init.node.sh
