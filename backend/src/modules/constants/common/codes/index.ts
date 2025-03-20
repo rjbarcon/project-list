@@ -1,1 +1,1 @@
-export * from "./http/http.codes";
+export * from "./http.codes";
