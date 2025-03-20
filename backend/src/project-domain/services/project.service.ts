@@ -1,11 +1,8 @@
 export class ProjectService {
   constructor() {}
 
-  public async getProjectList() {
-    const data = [
-      { id: 1, name: "Project Alpha", description: "A React project." },
-      { id: 2, name: "Project Beta", description: "A Node.js project." },
-    ];
+  public async getProjectList(): Promise<any> {
+    const data: any = [];
 
     return data;
   }

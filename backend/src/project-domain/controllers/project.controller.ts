@@ -9,7 +9,7 @@ import { HTTP_CODES, ROUTE_ERROR_MESSAGE } from "../../modules/constants";
 export class ProjectController {
   constructor() {}
 
-  public async getProjectList(req: Request) {
+  public async getProjectList(req: Request): Promise<any> {
     try {
       console.log(`ProjectController.getProjectList start`);
 
