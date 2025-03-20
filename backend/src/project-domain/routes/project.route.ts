@@ -15,11 +15,11 @@ class ProjectRoute {
   private getProjectList(): void {
     this.router.get(PROJECT_ROUTE.BASE_ROUTE, async (req: Request, res: Response) => {
       try {
-        console.log(`ProjectRoute.getProjectList start`);
+        console.log(`>> ProjectRoute.getProjectList: start`);
 
         const response: any = await projectController.getProjectList(req);
 
-        console.log(`ProjectRoute.getProjectList end`);
+        console.log(`>> ProjectRoute.getProjectList: end`);
 
         res.status(response?.code || HTTP_CODES.SUCCESSFUL.OK).send(response);
       } catch (error) {

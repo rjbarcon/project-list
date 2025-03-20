@@ -1,5 +1,5 @@
 import { Request } from "express";
-import { projectService } from '../services';
+import { projectService } from "../services";
 
 /* TODO: This will be imported soon via external npm registry */
 import { IProject, IResponse } from "../../modules/interface";
@@ -11,11 +11,12 @@ export class ProjectController {
 
   public async getProjectList(req: Request): Promise<any> {
     try {
-      console.log(`ProjectController.getProjectList start`);
+      console.log(`>> ProjectController.getProjectList: start`);
 
-      const data = await projectService.getProjectList()
+      const data = await projectService.getProjectList(req);
+
       
-      console.log(`ProjectController.getProjectList end`);
+      console.log(`>> ProjectController.getProjectList: end`);
 
       return data;
     } catch (error) {

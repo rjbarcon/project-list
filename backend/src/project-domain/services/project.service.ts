@@ -1,10 +1,23 @@
+import { Request } from "express";
+import { DatabaseService } from "./database.service";
+import { DB_LIST, PROJECT_DB } from "../../modules/constants";
+
 export class ProjectService {
   constructor() {}
 
-  public async getProjectList(): Promise<any> {
-    const data: any = [];
+  public async getProjectList(req: Request): Promise<any> {
+    try {
+      const database = new DatabaseService(DB_LIST.POSTGRESQL);
 
-    return data;
+      const query = req.query;
+
+      const data: any = await database.getList(PROJECT_DB.PROJECT_TABLE, query);
+      console.log(`🔥 ~ data:`, data);
+
+      return data;
+    } catch (error) {
+      throw error; // Can be catch on controller
+    }
   }
 }
 
