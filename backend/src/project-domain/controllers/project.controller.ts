@@ -1,21 +1,26 @@
 import { Request } from "express";
+import { projectService } from '../services';
+
+/* TODO: This will be imported soon via external npm registry */
 import { IProject, IResponse } from "../../modules/interface";
-import { ResponseModel } from "../../modules/models/common/response.model";
+import { ErrorModel } from "../../modules/models";
+import { HTTP_CODES, ROUTE_ERROR_MESSAGE } from "../../modules/constants";
 
 export class ProjectController {
   constructor() {}
 
   public async getProjectList(req: Request) {
-    console.log(`ProjectController.getProjectList start`);
+    try {
+      console.log(`ProjectController.getProjectList start`);
 
-    const data: IProject[] = [
-      { id: 1, name: "Project Alpha", description: "A React project." },
-      { id: 2, name: "Project Beta", description: "A Node.jsproject." },
-    ];
+      const data = await projectService.getProjectList()
+      
+      console.log(`ProjectController.getProjectList end`);
 
-    console.log(`ProjectController.getProjectList end`);
-
-    return data;
+      return data;
+    } catch (error) {
+      return new ErrorModel(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR, ROUTE_ERROR_MESSAGE.SOMETHING_WENT_WRONG);
+    }
   }
 }
 

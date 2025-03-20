@@ -12,7 +12,7 @@ class ProjectRoute {
     this.getProjectList();
   }
 
-  private getProjectList() {
+  private getProjectList(): void {
     this.router.get(PROJECT_ROUTE.BASE_ROUTE, async (req: Request, res: Response) => {
       try {
         console.log(`ProjectRoute.getProjectList start`);
@@ -23,9 +23,13 @@ class ProjectRoute {
 
         res.status(response?.code || HTTP_CODES.SUCCESSFUL.OK).send(response);
       } catch (error) {
-        res
-          .status(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR)
-          .send(new ErrorModel(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR, ROUTE_ERROR_MESSAGE.SOMETHING_WENT_WRONG));
+        if (error instanceof ErrorModel) {
+          res.status(error.statusCode).send(error.message);
+        } else {
+          res
+            .status(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR)
+            .send(new ErrorModel(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR, ROUTE_ERROR_MESSAGE.SOMETHING_WENT_WRONG));
+        }
       }
     });
   }
