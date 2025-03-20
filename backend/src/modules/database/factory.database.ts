@@ -1,4 +1,4 @@
-// import { MySQLDatabase } from './mysql.database'; // TO BE USE SOONER
+// import { MySQLDatabase } from './mysql.database'; /* TO BE USE SOONER  */
 
 import { DB_LIST, DB_LIST_TYPE } from "../constants";
 import { AbstractDatabase } from "./abstract.database";
@@ -11,8 +11,8 @@ export class DatabaseFactory {
         return new PostgresDatabase();
 
       // case "mysql":
-      //
       //    return new MySQLDatabase();
+
       default:
         throw new Error(`Database type ${type} is not supported.`);
     }

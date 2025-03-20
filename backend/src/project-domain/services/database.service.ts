@@ -1,7 +1,7 @@
 /* TODO: This will be imported soon via external npm registry */
 import { DB_LIST, DB_LIST_TYPE, ERROR_DATABASE_CODES, ERROR_DATABASE_MESSAGE, HTTP_CODES, ROUTE_ERROR_MESSAGE } from "../../modules/constants";
 import { AbstractDatabase, DatabaseFactory } from "../../modules/database";
-import { IProject } from "../../modules/interface";
+import { IProject, IProjectGetListQuery } from "../../modules/interface";
 import { ErrorModel } from "../../modules/models";
 
 const ALLOWED_TABLES = ["projects"];
@@ -18,11 +18,11 @@ export class DatabaseService {
     try {
       this.database = DatabaseFactory.createDatabase(databaseName);
     } catch (error) {
-      throw error; // will be catch on the service
+      throw error;
     }
   }
 
-  public async getList(tableName: string, query: IProject) {
+  public async getList(tableName: string, query: IProjectGetListQuery) {
     try {
       console.log(`>> DatabaseService.getList: ${tableName} start`);
 
@@ -60,10 +60,12 @@ export class DatabaseService {
       conditions.push(`id = $${index++}`);
       values.push(project.id);
     }
+
     if (project.name) {
-      conditions.push(`name = $${index++}`);
-      values.push(project.name);
+      conditions.push(`name ILIKE $${index++}`);
+      values.push(`%${project.name}%`);
     }
+
     if (project.description) {
       conditions.push(`description = $${index++}`);
       values.push(project.description);
