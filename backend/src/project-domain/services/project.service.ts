@@ -12,6 +12,7 @@ export class ProjectService {
       const query = req.query;
 
       const data: any = await database.getList(PROJECT_DB.PROJECT_TABLE, query);
+
       console.log(`🔥 ~ data:`, data);
 
       return data;

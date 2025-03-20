@@ -15,12 +15,12 @@ export class ProjectController {
 
       const data = await projectService.getProjectList(req);
 
-      
       console.log(`>> ProjectController.getProjectList: end`);
 
       return data;
     } catch (error) {
-      return new ErrorModel(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR, ROUTE_ERROR_MESSAGE.SOMETHING_WENT_WRONG);
+      if (error && error instanceof ErrorModel) throw error; // will be handle on route
+      else throw new ErrorModel(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR, ROUTE_ERROR_MESSAGE.SOMETHING_WENT_WRONG);
     }
   }
 }

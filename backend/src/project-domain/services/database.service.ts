@@ -1,5 +1,5 @@
 /* TODO: This will be imported soon via external npm registry */
-import { DB_LIST, DB_LIST_TYPE, HTTP_CODES } from "../../modules/constants";
+import { DB_LIST, DB_LIST_TYPE, ERROR_DATABASE_CODES, ERROR_DATABASE_MESSAGE, HTTP_CODES, ROUTE_ERROR_MESSAGE } from "../../modules/constants";
 import { AbstractDatabase, DatabaseFactory } from "../../modules/database";
 import { IProject } from "../../modules/interface";
 import { ErrorModel } from "../../modules/models";
@@ -35,11 +35,17 @@ export class DatabaseService {
 
       const result = await this.database.query(queryText, values);
 
+      await this.database.disconnect();
+
       console.log(`>> DatabaseService.getList: ${tableName} end`);
 
       return result;
-    } catch (error) {
-      throw error; // will be catch on the service
+    } catch (error: any) {
+      if (error?.code === ERROR_DATABASE_CODES.DB_CONNECTION_FAILURE) {
+        throw new ErrorModel(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR, ERROR_DATABASE_MESSAGE.DB_CONNECTION_FAILURE);
+      } else {
+        throw new ErrorModel(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR, ROUTE_ERROR_MESSAGE.SOMETHING_WENT_WRONG);
+      }
     }
   }
 

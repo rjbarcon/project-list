@@ -23,8 +23,9 @@ class ProjectRoute {
 
         res.status(response?.code || HTTP_CODES.SUCCESSFUL.OK).send(response);
       } catch (error) {
+        console.log(`🔥 ~ error:`, error);
         if (error instanceof ErrorModel) {
-          res.status(error.statusCode).send(error.message);
+          res.status(error.statusCode).send(error);
         } else {
           res
             .status(HTTP_CODES.SERVER_ERROR.INTERNAL_SERVER_ERROR)
