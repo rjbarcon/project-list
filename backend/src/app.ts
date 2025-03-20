@@ -2,6 +2,8 @@ import cors from "cors";
 import express, { Application, NextFunction, Request, Response } from "express";
 import { projectRoute } from "./project-domain";
 
+import { auth } from "express-oauth2-jwt-bearer";
+
 /* TODO: This will be imported soon via external npm registry */
 import { HTTP_CODES, ROUTE_ERROR_MESSAGE } from "./modules/constants";
 import { ErrorModel } from "./modules/models";
@@ -15,6 +17,14 @@ class App {
   }
 
   private initialize() {
+    const jwtCheck = auth({
+      audience: process.env.AUTH0_AUDIENCE,
+      issuerBaseURL: process.env.AUTH0_ISSUER_BASE_URL,
+      tokenSigningAlg: "RS256",
+    });
+
+    this.app.use(jwtCheck);
+
     this.app.use(cors()); // DO NOT USE THIS ON PRODUCTION
 
     this.app.use(express.json());

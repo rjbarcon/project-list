@@ -1,17 +1,22 @@
 import { IProject } from "@/library/interface";
-import { BaseAPIService } from "./base.service.api";
 
 export class ProjectAPIService {
   public async getProjectList(
     query?: string,
     filterBy?: string,
   ): Promise<IProject[]> {
-    const api = new BaseAPIService("projects");
+    let url = "/api/proxy/projects";
 
-    const params = filterBy && query ? { [filterBy]: query } : null;
+    if (query && filterBy) {
+      const searchParams = new URLSearchParams({ [filterBy]: query });
+      url += `?${searchParams.toString()}`;
+    }
 
-    const dataset = await api.getList<IProject>(params);
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Error! Failed to fetch projects from proxy");
+    }
 
-    return dataset;
+    return await response.json();
   }
 }

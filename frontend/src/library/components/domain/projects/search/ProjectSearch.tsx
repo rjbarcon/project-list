@@ -20,7 +20,7 @@ export const ProjectSearch = ({
 
   return (
     <div className="mx-auto max-w-5xl">
-      <div className="flex items-center gap-4 mb-4">
+      <div className="flex items-center gap-4 my-4">
         <input
           type="text"
           value={searchQuery}
