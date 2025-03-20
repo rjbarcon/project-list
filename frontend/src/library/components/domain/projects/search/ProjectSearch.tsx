@@ -48,17 +48,13 @@ export const ProjectSearch = ({
           Search
         </button>
 
-        <button
-          onClick={onAddProject}
-          className="bg-green-600 text-white px-3 py-1 rounded"
-        >
+        {/* TODO: Backlog; create functionality to add items on list */}
+        <button className="bg-gray-600 text-white px-3 py-1 rounded">
           + Add
         </button>
 
-        <button
-          onClick={onAddProject}
-          className="bg-orange-600 text-white px-3 py-1 rounded"
-        >
+        {/* TODO: Backlog; create functionality to reset the list (original items) */}
+        <button className="bg-gray-600 text-white px-3 py-1 rounded">
           - Reset
         </button>
       </div>
