@@ -15,7 +15,8 @@ class App {
   }
 
   private initialize() {
-    this.app.use(cors());
+    this.app.use(cors()); // DO NOT USE THIS ON PRODUCTION
+
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
 
