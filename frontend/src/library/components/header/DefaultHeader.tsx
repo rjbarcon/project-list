@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 
@@ -25,23 +27,38 @@ export const DefaultHeader = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-teal-700 dark:bg-sky-950 p-4 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="text-white font-bold text-xl">
-          Project List
+        <Link
+          href="/"
+          className="black-white font-bold text-xl hover:text-white"
+        >
+          <Image
+            src="/logo/main-logo.svg"
+            alt="Project List Logo"
+            width={100}
+            height={100}
+          />
         </Link>
 
         <div className="flex items-center space-x-4">
-          <Link href="/projects" className="text-gray-300 hover:text-white">
+          <Link href="/projects" className="black-white hover:text-white">
             Projects
           </Link>
 
-          <Link href="/categories" className="text-gray-300 hover:text-white">
+          <Link href="/categories" className="black-white hover:text-white">
             Categories
           </Link>
 
-          <button onClick={toggleTheme} className="bg-gray-700 text-white px-3 py-1 rounded flex items-center">
-            {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+          <button
+            onClick={toggleTheme}
+            className="bg-gray-700 text-white px-3 py-1 rounded flex items-center"
+          >
+            {theme === "light" ? (
+              <Moon className="w-5 h-5" />
+            ) : (
+              <Sun className="w-5 h-5" />
+            )}
           </button>
         </div>
       </div>
