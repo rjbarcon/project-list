@@ -1,6 +1,7 @@
 # Project List
 
 - An application where you can add, view, edit, and delete a list of projects
+- Note that auth0 will prompt immediately once you enter the website
 
 ### You can visit the website here: **https://project-list-chi.vercel.app/**
 
@@ -38,6 +39,10 @@
 ### Live Backend Implementation
 
 ![image](https://github.com/user-attachments/assets/2a240db5-f1fb-4c6f-b3db-3342156ccb75)
+
+### Auth0 (frontend)
+![image](https://github.com/user-attachments/assets/20b9e696-f9f3-4a62-99a7-e1e2565e6616)
+
 
 ## Overview
 
