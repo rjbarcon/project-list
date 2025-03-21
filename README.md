@@ -2,6 +2,19 @@
 
 An application where you can add, view, edit, and delete a list of projects.
 
+![image](https://github.com/user-attachments/assets/e952ab1e-009b-4944-98df-63a721e211f0)
+![image](https://github.com/user-attachments/assets/878aa6b3-d7ee-482d-9d9c-87ad65fd764e)
+
+**Query by name**
+![image](https://github.com/user-attachments/assets/2e261c21-2cc1-410d-9269-f307df1f2385)
+
+**Query by id**
+![image](https://github.com/user-attachments/assets/68ae2907-0284-4a10-825c-4f09ec371b91)
+
+**Responsiveness/Media Query**
+![image](https://github.com/user-attachments/assets/24d980ae-e8ea-4af7-99d5-1330fc555b52)
+![image](https://github.com/user-attachments/assets/ba3ef15e-c795-4216-9e65-1eea581ac188)
+
 ## Overview
 
 The Project List application is a full-stack web application designed to help you manage your projects. It allows you to:
