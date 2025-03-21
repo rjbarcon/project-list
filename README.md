@@ -1,14 +1,15 @@
 # Project Listing Application
 
 - An application where you can add, view, edit, and delete a list of projects
-- Note that auth0 will prompt immediately once you enter the website
-- Kindly contact me via **rjbarcon@gmail.com** for assistance
+- Kindly contact me via **rjbarcon@gmail.com** for assistance installing locally
 
 ---
-### The backend was deployed to Sliplane (hosting service) with dockerhub
+
+### The frontend was deployed to Vercel (hosting service) 
 
 #### LIVE WEBSITE LINK: **https://project-list-chi.vercel.app/**
 
+- Note that auth0 will prompt immediately once you enter the website
 - Note that I tried to deploy the frontend with docker but there's an error connecting the nextjs to the backend (probably some issue with the container)
 
 ---
