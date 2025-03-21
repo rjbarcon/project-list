@@ -2,8 +2,9 @@
 
 - An application where you can add, view, edit, and delete a list of projects
 - Note that auth0 will prompt immediately once you enter the website
+- Kindly contact me via **rjbarcon@gmail.com** for assistance
 
-### You can visit the website here: **https://project-list-chi.vercel.app/**
+### LIVE WEBSITE LINK: **https://project-list-chi.vercel.app/**
 
 ---
 
