@@ -4,7 +4,12 @@
 - Note that auth0 will prompt immediately once you enter the website
 - Kindly contact me via **rjbarcon@gmail.com** for assistance
 
-### LIVE WEBSITE LINK: **https://project-list-chi.vercel.app/**
+---
+### The backend was deployed to Sliplane (hosting service) with dockerhub
+
+#### LIVE WEBSITE LINK: **https://project-list-chi.vercel.app/**
+
+- Note that I tried to deploy the frontend with docker but there's an error connecting the nextjs to the backend (probably some issue with the container)
 
 ---
 
@@ -12,7 +17,6 @@
 
 - **Dockerhub** - https://hub.docker.com/r/rjbarcon/project-list-backend
 - **API Endpoint (Secured)** - https://rjbarcon-project-list-backend.sliplane.app/api/projects
-- Note that I tried to deploy the frontend with docker but there's an error connecting the nextjs to the backend (probably some issue with the container)
 
 ## Preview (Screenshots)
 
