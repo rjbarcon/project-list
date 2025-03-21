@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAccessToken } from "@auth0/nextjs-auth0/";
+import { getAccessToken } from "@auth0/nextjs-auth0/edge";
 
 export async function GET(request: NextRequest) {
   const response = new NextResponse();
