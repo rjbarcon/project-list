@@ -45,7 +45,7 @@
 ### Auth0 (frontend)
 ![image](https://github.com/user-attachments/assets/20b9e696-f9f3-4a62-99a7-e1e2565e6616)
 
-### Postgre (Live)
+### PostgreSQL (NeonDB)
 ![image](https://github.com/user-attachments/assets/a87c0d15-5579-443e-a18f-4d3b84fce175)
 
 
@@ -70,7 +70,7 @@ The Project List application is a full-stack web application designed to help yo
 
 - **Frontend:** Nextjs v15 (Used client components only)
 - **Backend:** Node.js with Express.js
-- **Database:** PostgreSQL v17
+- **Database:** PostgreSQL v17 (Used neon on deployment)
 - **Other:** Auth0 (for authentication)
 
 ## Installation Instructions
