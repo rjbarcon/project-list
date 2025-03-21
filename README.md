@@ -4,6 +4,13 @@
 
 ### You can visit the website here: **https://project-list-chi.vercel.app/**
 
+---
+
+### The backend was deployed to Sliplane (hosting service) with dockerhub
+
+- **Dockerhub** - https://hub.docker.com/r/rjbarcon/project-list-backend
+- **API Endpoint (Secured)** - https://rjbarcon-project-list-backend.sliplane.app/api/projects
+
 ## Preview (Screenshots)
 
 ### Light Mode
@@ -24,21 +31,30 @@
 
 ### Responsiveness/Media Query
 
-![image](https://github.com/user-attachments/assets/24d980ae-e8ea-4af7-99d5-1330fc555b52)
-![image](https://github.com/user-attachments/assets/ba3ef15e-c795-4216-9e65-1eea581ac188)
+| Tablet                                                                                    | Mobile                                                                                    |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ![image](https://github.com/user-attachments/assets/24d980ae-e8ea-4af7-99d5-1330fc555b52) | ![image](https://github.com/user-attachments/assets/ba3ef15e-c795-4216-9e65-1eea581ac188) |
 
 ### Live Backend Implementation
-![image](https://github.com/user-attachments/assets/2a240db5-f1fb-4c6f-b3db-3342156ccb75)
 
+![image](https://github.com/user-attachments/assets/2a240db5-f1fb-4c6f-b3db-3342156ccb75)
 
 ## Overview
 
 The Project List application is a full-stack web application designed to help you manage your projects. It allows you to:
 
-- **View:** See a list of all your projects.
-- **Create:** Add new projects with details like name, description, and status. _**CURRENTLY ON BACKLOG**_
-- **Edit:** Modify existing project details. _**CURRENTLY ON BACKLOG**_
-- **Delete:** Remove projects you no longer need. _**CURRENTLY ON BACKLOG**_
+**Deployed:**
+
+- **View:** See a list of all projects.
+- **Filter by id:** You can filter by id via search bar
+- **Filter by name:** You can filter by name via search bar
+- **Light & Dark mode:** You can toggle light/dark mode
+
+**Backlogs:**
+
+- **Create:** Add new projects with details like name, description, and status.
+- **Edit:** Modify existing project details.
+- **Delete:** Remove projects you no longer need.
 
 ## Technologies Used
 
@@ -85,8 +101,11 @@ This document outlines the installation process for both the frontend and backen
     - Add the following environment variables to the `.env` file, replacing the placeholders with your actual values:
 
     ```
+    AUTH0_AUDIENCE=<CONTACT_RONNIE_FOR_THE_KEYS>
+    AUTH0_ISSUER_BASE_URL=<CONTACT_RONNIE_FOR_THE_KEYS>
     PORT=3500
-    DATABASE_URL=<KINDLY_CONTACT_RONNIE_FOR_THE__KEYS>
+    POSTGRESQL_CONNECTION_STRING=<CONTACT_RONNIE_FOR_THE_KEYS>
+    PORT=3500
     ```
 
 5.  **Start the Backend Server:**
@@ -139,8 +158,6 @@ This document outlines the installation process for both the frontend and backen
     ```
 
     - This will start the server on `http://localhost:3000`.
-
-## Usage
 
 ## License
 
