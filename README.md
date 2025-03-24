@@ -42,11 +42,11 @@
 
 ### Live Backend Implementation
 
-![image](https://github.com/user-attachments/assets/2a240db5-f1fb-4c6f-b3db-3342156ccb75)
+![image](https://github.com/user-attachments/assets/e6390830-e3f0-4257-804d-60b8ed757773)
 
 ### Auth0 (frontend)
 
-![image](https://github.com/user-attachments/assets/e6390830-e3f0-4257-804d-60b8ed757773)
+![image](https://github.com/user-attachments/assets/20b9e696-f9f3-4a62-99a7-e1e2565e6616)
 
 ### PostgreSQL (NeonDB)
 
