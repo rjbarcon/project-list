@@ -4,7 +4,7 @@
 
 ---
 
-### The frontend was deployed to Vercel (hosting service) 
+### The frontend was deployed to Vercel (hosting service)
 
 #### LIVE WEBSITE LINK: **https://project-list-chi.vercel.app/**
 
@@ -45,11 +45,12 @@
 ![image](https://github.com/user-attachments/assets/2a240db5-f1fb-4c6f-b3db-3342156ccb75)
 
 ### Auth0 (frontend)
-![image](https://github.com/user-attachments/assets/20b9e696-f9f3-4a62-99a7-e1e2565e6616)
+
+![image](https://github.com/user-attachments/assets/e6390830-e3f0-4257-804d-60b8ed757773)
 
 ### PostgreSQL (NeonDB)
-![image](https://github.com/user-attachments/assets/a87c0d15-5579-443e-a18f-4d3b84fce175)
 
+![image](https://github.com/user-attachments/assets/a87c0d15-5579-443e-a18f-4d3b84fce175)
 
 ## Overview
 
