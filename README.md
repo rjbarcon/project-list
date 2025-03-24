@@ -1,7 +1,6 @@
 # Project Listing Application
 
 - An application where you can add, view, edit, and delete a list of projects
-- Kindly contact me via **rjbarcon@gmail.com** for assistance installing locally
 
 ---
 
@@ -12,12 +11,10 @@
 - Note that auth0 will prompt immediately once you enter the website
 - Note that I tried to deploy the frontend with docker but there's an error connecting the nextjs to the backend (probably some issue with the container)
 
----
-
-### The backend was deployed to Sliplane (hosting service) with dockerhub
+### The backend was deployed to Render (hosting service) with dockerhub
 
 - **Dockerhub** - https://hub.docker.com/r/rjbarcon/project-list-backend
-- **API Endpoint (Secured)** - https://rjbarcon-project-list-backend.sliplane.app/api/projects
+- **API Endpoint (Secured)** - https://project-list-backend-u45p.onrender.com/api/projects
 
 ## Preview (Screenshots)
 
