@@ -50,7 +50,7 @@
 
 ### PostgreSQL (NeonDB)
 
-![image](https://github.com/user-attachments/assets/a87c0d15-5579-443e-a18f-4d3b84fce175)
+![image](https://github.com/user-attachments/assets/bd7b42cb-ff8f-4ba0-abb0-0f720cc03a48)
 
 ## Overview
 
