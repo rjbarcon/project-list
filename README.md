@@ -20,11 +20,11 @@
 
 ### Light Mode
 
-![image](https://github.com/user-attachments/assets/e952ab1e-009b-4944-98df-63a721e211f0)
+![image](https://github.com/user-attachments/assets/32f8c2e4-d421-4436-b910-425b43fb2ab1)
 
 ### Dark Mode
 
-![image](https://github.com/user-attachments/assets/878aa6b3-d7ee-482d-9d9c-87ad65fd764e)
+![image](https://github.com/user-attachments/assets/b51d5f72-e37f-4722-8a44-48a491e7d352)
 
 ### Query by name
 
@@ -38,7 +38,7 @@
 
 | Tablet                                                                                    | Mobile                                                                                    |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| ![image](https://github.com/user-attachments/assets/24d980ae-e8ea-4af7-99d5-1330fc555b52) | ![image](https://github.com/user-attachments/assets/ba3ef15e-c795-4216-9e65-1eea581ac188) |
+| ![image](https://github.com/user-attachments/assets/0433197d-80e2-47c0-97e6-0ff40267ebca) | ![image](https://github.com/user-attachments/assets/5c46be4e-1146-4b1f-85b9-12148f510f56) |
 
 ### Live Backend Implementation
 
